@@ -1,5 +1,6 @@
-function colorClock() {
+function colorClock(){
   var date = new Date();
+
   var hours = date.getHours();
   var minutes = date.getMinutes();
   var seconds = date.getSeconds();
@@ -19,19 +20,7 @@ function colorClock() {
 
   document.getElementById('clock').innerHTML = clockFace;
   document.body.style.background = hexColor;
-  
-  function getColor() {
-  return (
-    "#" + Math.random().toString(16).slice(2, 8)
-  );
-}
-  
-function setBackground() {
-  let bgColor = getColor();
-  document.body.style.background = bgColor;
-}
-setBackground();
-  
+
   setTimeout(function() {
     colorClock();
   }, 1000);
